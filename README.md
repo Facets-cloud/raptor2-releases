@@ -11,12 +11,12 @@ Download the latest release for your platform:
 # AMD64
 curl -L -o raptor2 https://github.com/Facets-cloud/raptor2-releases/releases/latest/download/raptor2-linux-amd64
 chmod +x raptor2
-sudo mv raptor2 /usr/local/bin/
+mv raptor2 ~/.local/bin/
 
 # ARM64
 curl -L -o raptor2 https://github.com/Facets-cloud/raptor2-releases/releases/latest/download/raptor2-linux-arm64
 chmod +x raptor2
-sudo mv raptor2 /usr/local/bin/
+mv raptor2 ~/.local/bin/
 ```
 
 ### macOS
@@ -24,13 +24,15 @@ sudo mv raptor2 /usr/local/bin/
 # Intel
 curl -L -o raptor2 https://github.com/Facets-cloud/raptor2-releases/releases/latest/download/raptor2-darwin-amd64
 chmod +x raptor2
-sudo mv raptor2 /usr/local/bin/
+mv raptor2 ~/.local/bin/
 
 # Apple Silicon
 curl -L -o raptor2 https://github.com/Facets-cloud/raptor2-releases/releases/latest/download/raptor2-darwin-arm64
 chmod +x raptor2
-sudo mv raptor2 /usr/local/bin/
+mv raptor2 ~/.local/bin/
 ```
+
+> **Note:** Make sure `~/.local/bin` is in your `PATH`. Add `export PATH="$HOME/.local/bin:$PATH"` to your shell profile if needed.
 
 ## Getting Started
 
@@ -70,6 +72,9 @@ raptor2 apply environment -p my-app -e dev
 ```bash
 # View all available commands
 raptor2 --help
+
+# Check version
+raptor2 --version
 
 # List projects
 raptor2 get projects
